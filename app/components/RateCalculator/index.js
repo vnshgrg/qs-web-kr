@@ -1,23 +1,23 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import Select from '../Select';
-import { countries, countriesFlag, serviceCharge } from '../../config';
-import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import Select from "../Select";
+import { countries, countriesFlag, serviceCharge } from "../../config";
+import useTranslation from "next-translate/useTranslation";
+import Trans from "next-translate/Trans";
 
 const sendingCountries = [
-    {
-        code: 'JPN',
-        currency: 'JPY',
-        name: '🇯🇵 Japan',
-        url: 'https://nnpj.qsremit.net/openapi/get/fxrates'
-    }
     // {
-    //     code: 'KOR',
-    //     currency: 'KRW',
-    //     name: '🇰🇷 Korea',
-    //     url: 'https://www.qsremit.kr/openapi/get/fxrates'
+    //     code: 'JPN',
+    //     currency: 'JPY',
+    //     name: '🇯🇵 Japan',
+    //     url: 'https://nnpj.qsremit.net/openapi/get/fxrates'
     // }
+    {
+        code: "KOR",
+        currency: "KRW",
+        name: "🇰🇷 Korea",
+        url: "https://mobile.qsremit.net/openapi/get/fxrates",
+    },
 ];
 
 const RateCalculator = () => {
@@ -27,14 +27,14 @@ const RateCalculator = () => {
     const [selectedSendingCountry, setSelectedSendingCountry] = useState(
         sendingCountries[0]
     );
-    const [sendingOrReceiving, setSendingOrReceiving] = useState('Sending');
+    const [sendingOrReceiving, setSendingOrReceiving] = useState("Sending");
     const [amount, setAmount] = useState(0);
-    const [sendingMethod, setSendingMethod] = useState('bank');
+    const [sendingMethod, setSendingMethod] = useState("bank");
     const [currentServiceCharge, setCurrentServiceCharge] = useState(null);
     const [currentServiceChargeAmount, setCurrentServiceChargeAmount] =
         useState(0);
 
-    const { t } = useTranslation('ratecalculator');
+    const { t } = useTranslation("ratecalculator");
 
     const filterUniqueCountries = (rateList) => {
         const distinctCountry = [];
@@ -64,14 +64,14 @@ const RateCalculator = () => {
                             name: countryName,
                             code: country,
                             currency,
-                            fxrate
+                            fxrate,
                         };
                     }
                 );
                 setReceivingCountries(options);
                 setSelectedReceivingCountry(options[0]);
             } catch (error) {
-                console.log('Could not retrieve rates');
+                console.log("Could not retrieve rates");
             }
         };
         fetchRates();
@@ -89,20 +89,20 @@ const RateCalculator = () => {
 
                 if (amount < serviceChargeRate[0].min) {
                     setCurrentServiceCharge(
-                        t('service-charge-min-amount', {
+                        t("service-charge-min-amount", {
                             sendingCurrency: sendingCurrency(),
-                            minimum: serviceChargeRate[0].min
+                            minimum: serviceChargeRate[0].min,
                         })
                     );
                 } else if (
                     amount > serviceChargeRate[serviceChargeRate.length - 1].max
                 ) {
                     setCurrentServiceCharge(
-                        t('service-charge-max-amount-exceed', {
+                        t("service-charge-max-amount-exceed", {
                             sendingCurrency: sendingCurrency(),
                             maximum:
                                 serviceChargeRate[serviceChargeRate.length - 1]
-                                    .max
+                                    .max,
                         })
                     );
                 } else {
@@ -115,9 +115,9 @@ const RateCalculator = () => {
                     });
 
                     setCurrentServiceCharge(
-                        t('service-charge-amount', {
+                        t("service-charge-amount", {
                             sendingCurrency: sendingCurrency(),
-                            amount: serviceChargeAmount
+                            amount: serviceChargeAmount,
                         })
                     );
                     setCurrentServiceChargeAmount(serviceChargeAmount);
@@ -136,10 +136,10 @@ const RateCalculator = () => {
         const { code } = newReceivingCountry;
         const sendingMethodForNewReceivingCountry = serviceCharge[code].type;
         if (!sendingMethodForNewReceivingCountry[sendingMethod]) {
-            if (sendingMethod === 'bank') {
-                setSendingMethod('cash');
+            if (sendingMethod === "bank") {
+                setSendingMethod("cash");
             } else {
-                setSendingMethod('bank');
+                setSendingMethod("bank");
             }
         }
     };
@@ -162,7 +162,7 @@ const RateCalculator = () => {
     };
 
     const sendingCurrency = () => {
-        if (sendingOrReceiving === 'Sending') {
+        if (sendingOrReceiving === "Sending") {
             return selectedSendingCountry.currency;
         } else {
             return selectedReceivingCountry.currency;
@@ -170,7 +170,7 @@ const RateCalculator = () => {
     };
 
     const receivingCurrency = () => {
-        if (sendingOrReceiving === 'Sending') {
+        if (sendingOrReceiving === "Sending") {
             return selectedReceivingCountry.currency;
         } else {
             return selectedSendingCountry.currency;
@@ -180,10 +180,10 @@ const RateCalculator = () => {
     const receivingAmount = () => {
         if (!selectedReceivingCountry) return null;
 
-        let currency = '';
+        let currency = "";
         let amountFloat = 0;
 
-        if (sendingOrReceiving === 'Sending') {
+        if (sendingOrReceiving === "Sending") {
             currency = receivingCurrency();
             amountFloat = amount * selectedReceivingCountry.fxrate;
         } else {
@@ -197,7 +197,7 @@ const RateCalculator = () => {
     const sendingAmount = () => {
         if (!selectedReceivingCountry) return null;
 
-        if (sendingOrReceiving === 'Sending') {
+        if (sendingOrReceiving === "Sending") {
             console.log(amount, currentServiceChargeAmount);
             return amount;
         } else {
@@ -210,10 +210,10 @@ const RateCalculator = () => {
 
     const formatAmount = (currency, amount) => {
         if (
-            currency === 'AUD' ||
-            currency === 'SGD' ||
-            currency === 'MYR' ||
-            currency === 'RUB'
+            currency === "AUD" ||
+            currency === "SGD" ||
+            currency === "MYR" ||
+            currency === "RUB"
         ) {
             return `${parseFloat(amount).toFixed(2)}`;
         } else {
@@ -222,29 +222,29 @@ const RateCalculator = () => {
     };
 
     const renderResult = () => {
-        if (amount === 0 || amount === '') return null;
+        if (amount === 0 || amount === "") return null;
 
         let sendingInfo = {};
         let rateInfo = {};
         let receivingInfo = {};
-        if (sendingOrReceiving === 'Sending') {
+        if (sendingOrReceiving === "Sending") {
             sendingInfo = {
                 currency: sendingCurrency(),
                 amount:
                     parseInt(amount, 10) +
                     parseInt(currentServiceChargeAmount, 10),
-                country: selectedSendingCountry.name
+                country: selectedSendingCountry.name,
             };
 
             rateInfo = {
                 sendingCurrency: sendingCurrency(),
                 receivingCurrency: receivingCurrency(),
-                receivingFx: selectedReceivingCountry.fxrate
+                receivingFx: selectedReceivingCountry.fxrate,
             };
             receivingInfo = {
                 amount: receivingAmount(),
                 country:
-                    selectedReceivingCountry && selectedReceivingCountry.name
+                    selectedReceivingCountry && selectedReceivingCountry.name,
             };
         } else {
             sendingInfo = {
@@ -252,25 +252,25 @@ const RateCalculator = () => {
                 amount:
                     parseInt(sendingAmount(), 10) +
                     parseInt(currentServiceChargeAmount, 10),
-                country: selectedSendingCountry.name
+                country: selectedSendingCountry.name,
             };
 
             rateInfo = {
                 sendingCurrency: receivingCurrency(),
                 receivingCurrency:
                     selectedReceivingCountry && sendingCurrency(),
-                receivingFx: selectedReceivingCountry.fxrate
+                receivingFx: selectedReceivingCountry.fxrate,
             };
 
             receivingInfo = {
                 amount: receivingAmount(),
                 country:
-                    selectedReceivingCountry && selectedReceivingCountry.name
+                    selectedReceivingCountry && selectedReceivingCountry.name,
             };
         }
 
         let sendingMethodIcon = null;
-        if (sendingMethod === 'cash') {
+        if (sendingMethod === "cash") {
             sendingMethodIcon = (
                 <path
                     strokeLinecap="round"
@@ -297,7 +297,8 @@ const RateCalculator = () => {
                         <div className="relative pb-4">
                             <span
                                 className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                aria-hidden="true"></span>
+                                aria-hidden="true"
+                            ></span>
                             <div className="relative flex items-start space-x-3">
                                 <div>
                                     <div className="relative px-1">
@@ -307,7 +308,8 @@ const RateCalculator = () => {
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
-                                                stroke="currentColor">
+                                                stroke="currentColor"
+                                            >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
@@ -324,7 +326,7 @@ const RateCalculator = () => {
                                         values={sendingInfo}
                                         components={[
                                             <div className="text-base text-gray-600" />,
-                                            <span className="font-medium text-blue-700" />
+                                            <span className="font-medium text-blue-700" />,
                                         ]}
                                     />
                                 </div>
@@ -336,7 +338,8 @@ const RateCalculator = () => {
                         <div className="relative pb-5">
                             <span
                                 className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                aria-hidden="true"></span>
+                                aria-hidden="true"
+                            ></span>
                             <div className="relative flex items-start space-x-3">
                                 <div>
                                     <div className="relative px-1">
@@ -346,7 +349,8 @@ const RateCalculator = () => {
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
-                                                stroke="currentColor">
+                                                stroke="currentColor"
+                                            >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
@@ -370,7 +374,8 @@ const RateCalculator = () => {
                         <div className="relative pb-5">
                             <span
                                 className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
-                                aria-hidden="true"></span>
+                                aria-hidden="true"
+                            ></span>
                             <div className="relative flex items-start space-x-3">
                                 <div>
                                     <div className="relative px-1">
@@ -380,7 +385,8 @@ const RateCalculator = () => {
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
-                                                stroke="currentColor">
+                                                stroke="currentColor"
+                                            >
                                                 <path
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
@@ -396,7 +402,7 @@ const RateCalculator = () => {
                                         i18nKey="ratecalculator:rate"
                                         values={rateInfo}
                                         components={[
-                                            <div className="text-sm text-gray-400 italic" />
+                                            <div className="text-sm text-gray-400 italic" />,
                                         ]}
                                     />
                                 </div>
@@ -415,7 +421,8 @@ const RateCalculator = () => {
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
-                                                stroke="currentColor">
+                                                stroke="currentColor"
+                                            >
                                                 {sendingMethodIcon}
                                             </svg>
                                         </div>
@@ -427,7 +434,7 @@ const RateCalculator = () => {
                                         values={receivingInfo}
                                         components={[
                                             <div className="text-base text-gray-600" />,
-                                            <span className="font-medium text-blue-700" />
+                                            <span className="font-medium text-blue-700" />,
                                         ]}
                                     />
                                 </div>
@@ -446,13 +453,14 @@ const RateCalculator = () => {
                 name="sendingMethod"
                 type="radio"
                 value="bank"
-                checked={sendingMethod === 'bank' && true}
+                checked={sendingMethod === "bank" && true}
                 onChange={handleSendingMethod}
                 className="focus:ring-indigo-500 h-4 w-4 text-blue-600 border-gray-300"
             />
             <label
                 htmlFor="bank"
-                className="ml-3 block text-sm font-medium text-gray-700">
+                className="ml-3 block text-sm font-medium text-gray-700"
+            >
                 Bank deposite
             </label>
         </div>
@@ -465,13 +473,14 @@ const RateCalculator = () => {
                 name="sendingMethod"
                 type="radio"
                 value="cash"
-                checked={sendingMethod === 'cash' && true}
+                checked={sendingMethod === "cash" && true}
                 onChange={handleSendingMethod}
                 className="focus:ring-indigo-500 h-4 w-4 text-blue-600 border-gray-300"
             />
             <label
                 htmlFor="cash"
-                className="ml-3 block text-sm font-medium text-gray-700">
+                className="ml-3 block text-sm font-medium text-gray-700"
+            >
                 Cash pickup
             </label>
         </div>
@@ -514,20 +523,20 @@ const RateCalculator = () => {
                     <div className="grid grid-cols-2 gap-x-6">
                         <div>
                             <label htmlFor="name" className="sr-only">
-                                {t('from')}
+                                {t("from")}
                             </label>
                             <Select
-                                label={t('from')}
+                                label={t("from")}
                                 options={sendingCountries}
                                 onChange={handleSendingCountrySelect}
                             />
                         </div>
                         <div>
                             <label htmlFor="name" className="sr-only">
-                                {t('to')}
+                                {t("to")}
                             </label>
                             <Select
-                                label={t('to')}
+                                label={t("to")}
                                 options={receivingCountries}
                                 onChange={handleReceivingCountrySelect}
                             />
@@ -542,16 +551,17 @@ const RateCalculator = () => {
                                 type="radio"
                                 value="Sending"
                                 checked={
-                                    sendingOrReceiving === 'Sending' && true
+                                    sendingOrReceiving === "Sending" && true
                                 }
                                 onChange={handleSendingOrReceiving}
                                 className="focus:ring-indigo-500 h-4 w-4 text-blue-600 border-gray-300"
                             />
                             <label
                                 htmlFor="sending"
-                                className="ml-3 block text-sm font-medium text-gray-700">
-                                {t('Sending')}
-                                {t('amount')}
+                                className="ml-3 block text-sm font-medium text-gray-700"
+                            >
+                                {t("Sending")}
+                                {t("amount")}
                             </label>
                         </div>
                         <div className="flex items-center">
@@ -561,16 +571,17 @@ const RateCalculator = () => {
                                 type="radio"
                                 value="Receiving"
                                 checked={
-                                    sendingOrReceiving === 'Receiving' && true
+                                    sendingOrReceiving === "Receiving" && true
                                 }
                                 onChange={handleSendingOrReceiving}
                                 className="focus:ring-indigo-500 h-4 w-4 text-blue-600 border-gray-300"
                             />
                             <label
                                 htmlFor="receiving"
-                                className="ml-3 block text-sm font-medium text-gray-700">
-                                {t('Receiving')}
-                                {t('amount')}
+                                className="ml-3 block text-sm font-medium text-gray-700"
+                            >
+                                {t("Receiving")}
+                                {t("amount")}
                             </label>
                         </div>
                     </div>
@@ -578,9 +589,10 @@ const RateCalculator = () => {
                     <div>
                         <label
                             htmlFor="price"
-                            className="block text-sm font-medium text-gray-700">
+                            className="block text-sm font-medium text-gray-700"
+                        >
                             {t(sendingOrReceiving)}
-                            {t('amount')}
+                            {t("amount")}
                         </label>
                         <div className="mt-1 relative rounded-md shadow-sm">
                             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -595,7 +607,7 @@ const RateCalculator = () => {
                                 className="focus:ring-indigo-500 focus:border-blue-500 block w-full pl-12 pr-4 sm:text-sm border-gray-300 rounded-md"
                                 placeholder="0"
                                 aria-describedby="price-currency"
-                                value={amount === 0 ? '' : amount}
+                                value={amount === 0 ? "" : amount}
                                 onChange={handleAmountChange}
                             />
                         </div>
@@ -617,10 +629,10 @@ const RateCalculator = () => {
                 <div className="px-4 pt-8 pb-4 sm:px-8">
                     <div className="">
                         <h2 className="text-xl font-semibold tracking-tight text-primary sm:text-2xl">
-                            {t('rate-calculator')}
+                            {t("rate-calculator")}
                         </h2>
                         <p className="mt-1 text-md leading-6 text-gray-500">
-                            {t('description')}
+                            {t("description")}
                         </p>
                         {renderCalculationForm()}
                     </div>

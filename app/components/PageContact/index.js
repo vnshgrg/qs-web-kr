@@ -1,23 +1,24 @@
-import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 
 const PageContact = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation("common");
     return (
         <div className="mx-auto max-w-4xl py-16 px-4 sm:px-6 lg:px-8 md:mt-16">
             <div className="mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
                 <div>
                     <h2 className="text-xl text-gray-800 sm:text-2xl">
-                        {t('footer-title-1')}
+                        {t("footer-title-1")}
                     </h2>
                     <div className="mt-3">
                         <p className="text-lg text-gray-500">
-                            〒169-0073東京都新宿百人町2-20-2-201
+                            04541 서울특별시 중구 삼일대로 363(장교동) 장교빌딩
+                            710호
                             <br />
                             <span className="text-sm">
-                                201-2-20-2 Hyakunin-Cho, Shinjuku-Ku
+                                710 Janggyo Bldg Samildearo 363 Jung-Gu,
                                 <br />
-                                Tokyo, Japan (169-0073)
+                                Seoul, Korea
                             </span>
                         </p>
                     </div>
@@ -39,7 +40,7 @@ const PageContact = () => {
                 </div>
                 <div className="mt-12 sm:mt-16 md:mt-0">
                     <h2 className="text-xl text-gray-800 sm:text-2xl">
-                        {t('footer-title-2')}
+                        {t("footer-title-2")}
                     </h2>
                     <div className="mt-4">
                         <div className="flex">
@@ -51,7 +52,8 @@ const PageContact = () => {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
-                                    aria-hidden="true">
+                                    aria-hidden="true"
+                                >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
@@ -61,8 +63,8 @@ const PageContact = () => {
                                 </svg>
                             </div>
                             <div className="ml-3 text-base text-gray-500">
-                                <p>TEL: 03-5937-6321</p>
-                                <p className="mt-1">FAX: 03-5937-6320</p>
+                                <p>TEL: 02-755-6321</p>
+                                <p className="mt-1">FAX: 02-755-6320</p>
                             </div>
                         </div>
                         <div className="mt-6 flex">
@@ -74,7 +76,8 @@ const PageContact = () => {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
-                                    aria-hidden="true">
+                                    aria-hidden="true"
+                                >
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"

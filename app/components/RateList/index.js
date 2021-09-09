@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import RateItem from './RateItem';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import RateItem from "./RateItem";
 
 const RateList = () => {
     const [rates, setRates] = useState([]);
-    const [keyCurrency, setKeyCurrency] = useState('');
-    const [timestamp, setTimestamp] = useState('');
+    const [keyCurrency, setKeyCurrency] = useState("");
+    const [timestamp, setTimestamp] = useState("");
 
     const filterUniqueCountries = (rateList) => {
         const distinctCountry = [];
@@ -24,7 +24,7 @@ const RateList = () => {
         const fetchRate = async () => {
             try {
                 const response = await axios.get(
-                    'https://nnpj.qsremit.net/openapi/get/fxrates'
+                    "https://mobile.qsremit.net/openapi/get/fxrates"
                 );
                 if (response.data) {
                     const TS = new Date(response.data.dateTime);

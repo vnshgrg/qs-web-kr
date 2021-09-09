@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import useTranslation from 'next-translate/useTranslation';
+import React, { useState } from "react";
+import Head from "next/head";
+import useTranslation from "next-translate/useTranslation";
 
-import PageLayout from '../../app/layout/PageLayout';
-import { siteName } from '../../app/config';
-import Icon from '../../app/components/Icon';
-import axios from 'axios';
-import PageContact from '../../app/components/PageContact';
+import PageLayout from "../../app/layout/PageLayout";
+import { siteName } from "../../app/config";
+import Icon from "../../app/components/Icon";
+import axios from "axios";
+import PageContact from "../../app/components/PageContact";
 
 const Component = () => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState(null);
-    const [pin, setPin] = useState('');
+    const [pin, setPin] = useState("");
 
-    const { t } = useTranslation('common');
+    const { t } = useTranslation("common");
 
     const handleTrack = async () => {
         try {
             setLoading(true);
             // get txn data
-            const URL = `https://nnpj.qsremit.net/openapi/get/txn/status?txnid=QP${pin}`;
+            const URL = `https://mobile.qsremit.net/openapi/get/txn/status?txnid=QP${pin}`;
             const response = await axios.get(URL);
             setLoading(false);
             if (response.data) {
@@ -57,10 +57,11 @@ const Component = () => {
             <button
                 onClick={() => {
                     setResult(null);
-                    setPin('');
+                    setPin("");
                 }}
-                className=" mt-6 inline-flex items-center justify-center text-sm font-medium text-gray-700 ">
-                {t('tracker-check-another')}
+                className=" mt-6 inline-flex items-center justify-center text-sm font-medium text-gray-700 "
+            >
+                {t("tracker-check-another")}
             </button>
         );
     };
@@ -74,12 +75,12 @@ const Component = () => {
                 />
             </div>
             <p className="block mt-2 text-gray-700 font-semibold">
-                {t('tracker-not-found')}
+                {t("tracker-not-found")}
             </p>
             <p className="block mt-1 text-gray-500 text-sm">
-                {t('tracker-not-found-description-1')}{' '}
+                {t("tracker-not-found-description-1")}{" "}
                 <span className="font-semibold">{txnid}</span>.<br />
-                {t('tracker-not-found-description-2')}
+                {t("tracker-not-found-description-2")}
             </p>
             {CheckAnother()}
         </div>
@@ -88,15 +89,15 @@ const Component = () => {
     const ResultComponent = () => {
         const { txnid, status, updatedTime, error } = result;
         const TS = new Date(updatedTime);
-        const time = `${TS.toLocaleTimeString('en-US', {
-            timeZone: 'Asia/Tokyo'
+        const time = `${TS.toLocaleTimeString("en-US", {
+            timeZone: "Asia/Tokyo",
         })} ${TS.toDateString()}`;
         if (error) {
             return <ErroComp txnid={txnid} />;
         }
 
         switch (status) {
-            case 'Cancel':
+            case "Cancel":
                 return (
                     <div className="text-center">
                         <div>
@@ -106,22 +107,22 @@ const Component = () => {
                             />
                         </div>
                         <p className="block mt-2 text-red-600 font-semibold">
-                            {t('tracker-canceled-description-1')}
+                            {t("tracker-canceled-description-1")}
                         </p>
                         <p className="text-gray-500 mt-1 text-sm">
-                            {t('tracker-canceled-description-2')}
+                            {t("tracker-canceled-description-2")}
                         </p>
                         <p className="block mt-4 text-gray-500 text-xs">
-                            {t('tracker-transaction-id')}:{' '}
+                            {t("tracker-transaction-id")}:{" "}
                             <span className="font-semibold">{txnid}</span>
                             <br />
-                            {t('tracker-last-updated')}:{' '}
+                            {t("tracker-last-updated")}:{" "}
                             <span className="text-bold">{time}</span>
                         </p>
                         {CheckAnother()}
                     </div>
                 );
-            case 'Paid':
+            case "Paid":
                 return (
                     <div className="text-center">
                         <div>
@@ -131,13 +132,13 @@ const Component = () => {
                             />
                         </div>
                         <p className="block mt-2 text-green-600 font-semibold">
-                            {t('tracker-success')}
+                            {t("tracker-success")}
                         </p>
                         <p className="block mt-4 text-gray-500 text-xs">
-                            {t('tracker-transaction-id')}:{' '}
+                            {t("tracker-transaction-id")}:{" "}
                             <span className="font-semibold">{txnid}</span>
                             <br />
-                            {t('tracker-last-updated')}:{' '}
+                            {t("tracker-last-updated")}:{" "}
                             <span className="text-bold">{time}</span>
                         </p>
                         {CheckAnother()}
@@ -155,7 +156,8 @@ const Component = () => {
             <>
                 <label
                     htmlFor="pin-code"
-                    className="block text-base font-medium text-blue-600">
+                    className="block text-base font-medium text-blue-600"
+                >
                     QSRemit PIN Number
                 </label>
                 <div className="mt-4 relative rounded-md shadow-sm w-60 mx-auto">
@@ -173,14 +175,15 @@ const Component = () => {
                     />
                 </div>
                 <p className="text-gray-500 text-sm mt-6">
-                    {t('tracker-pin-description')}
+                    {t("tracker-pin-description")}
                 </p>
                 <p className="text-gray-500 text-sm mt-3">
-                    {t('tracker-contact-support')}
+                    {t("tracker-contact-support")}
                 </p>
                 <button
                     onClick={handleTrack}
-                    className=" mt-6 inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    className=" mt-6 inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
                     Check
                 </button>
             </>
@@ -195,10 +198,10 @@ const Component = () => {
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="block text-base text-center text-blue-600 font-semibold tracking-wide uppercase">
-                        {t('title-thanks')}
+                        {t("title-thanks")}
                     </span>
                     <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        {t('title-track')}
+                        {t("title-track")}
                     </span>
                 </h1>
 
