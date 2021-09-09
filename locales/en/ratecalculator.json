@@ -1,0 +1,15 @@
+{
+    "rate-calculator": "Rate calculator",
+    "description": "Calculate your remittance amount based on our current exchange rate.",
+    "from": "Sending from",
+    "to": "Receiving to",
+    "Sending": "Sending",
+    "Receiving": "Receiving",
+    "amount": " amount",
+    "sending": "<0>You send <1>{{currency}} {{amount}}</1> from {{country}}</0>",
+    "receiving": "<0><1>{{amount}}</1> is received at {{country}}</0>",
+    "rate": "<0>@ rate of {{sendingCurrency}} 1 = {{receivingCurrency}} {{receivingFx}}</0>",
+    "service-charge-max-amount-exceed": "Sending amount exceeds maxium amount ({{sendingCurrency}} {{maximum}}) allowed per transaction.",
+    "service-charge-min-amount": "Sending amount is less than minimum amount ({{sendingCurrency}} {{minimum}}) allowed per transaction.",
+    "service-charge-amount": "{{sendingCurrency}} {{amount}} service charge added"
+}
