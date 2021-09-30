@@ -1,5 +1,5 @@
 {
-    "site-name": "QSレミット",
+    "site-name": "QSREMIT",
     "send-money-send-happiness": "Send Money, send happiness",
     "intro-heading": "海外送金サービスのスタンダード",
     "intro-description": "隠れた手数料がなく、決めた金額そのまま、素早く受取人に届く海外送金サービスを提供いたします。",
@@ -47,5 +47,8 @@
     "tracker-canceled-title": "送金キャンセル",
     "tracker-canceled-description-1": "送金キャンセル",
     "tracker-canceled-description-2": "詳細については、カスタマサポートお問い合わせください。",
-    "tracker-hold": "送金は保留中です。"
+    "tracker-hold": "送金は保留中です。",
+    "office-day-01": "月曜日～金曜日　午前10時～午後7時",
+    "office-day-02": "日曜日、祭日　午前10時～午後6時",
+    "office-day-03": "土曜日　休み"
 }

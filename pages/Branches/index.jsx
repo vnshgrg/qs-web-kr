@@ -40,7 +40,7 @@ const Component = () => {
     return (
         <>
             <Head>
-                <title>Branches - {siteName}</title>
+                <title>{siteName} - Branches</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>

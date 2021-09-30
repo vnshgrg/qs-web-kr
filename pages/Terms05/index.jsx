@@ -10,7 +10,7 @@ const Component = (props) => {
     return (
         <>
             <Head>
-                <title>About us - {t("site-name")}</title>
+                <title>{t("site-name")}</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>

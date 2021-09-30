@@ -26,13 +26,13 @@ const PageContact = () => {
                         <div className="flex">
                             <div className="text-base text-gray-500">
                                 <p className="text-yellow-600">
-                                    Monday~Friday 10am-7pm
+                                    {t("office-day-01")}
                                 </p>
                                 <p className="text-blue-600">
-                                    Sunday and Japan national holidays 10am-6pm
+                                    {t("office-day-02")}
                                 </p>
                                 <p className="text-red-600">
-                                    Every Saturday is holiday
+                                    {t("office-day-03")}
                                 </p>
                             </div>
                         </div>

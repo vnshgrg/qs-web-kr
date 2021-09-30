@@ -1,21 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
-import useTranslation from 'next-translate/useTranslation';
-import PageLayout from '../../app/layout/PageLayout';
-import { siteName } from '../../app/config';
-import { PageContact, SeeAllBranch } from '../../app/components/';
+import React from "react";
+import Head from "next/head";
+import useTranslation from "next-translate/useTranslation";
+import PageLayout from "../../app/layout/PageLayout";
+import { siteName } from "../../app/config";
+import { PageContact, SeeAllBranch } from "../../app/components/";
 
 const Component = () => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation("common");
     return (
         <>
             <Head>
-                <title>How to register - {siteName}</title>
+                <title>{siteName} - How to register</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
                     <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
-                        {t('title-register')}
+                        {t("title-register")}
                     </span>
                 </h1>
 
@@ -27,17 +27,19 @@ const Component = () => {
                     </div>
                     <div className="px-4 py-4 sm:px-6 flex flex-col sm:flex-row items-center">
                         <span className="text-gray-700 text-base leading-tight text-center sm:text-left sm:flex-1">
-                            {t('title-register-app')}
+                            {t("title-register-app")}
                         </span>
                         <a
                             href="#"
-                            className="mt-3 sm:mt-0 text-sm px-4 py-2 bg-primary text-white font-medium rounded hover:bg-yellow-600 inline-flex items-center">
+                            className="mt-3 sm:mt-0 text-sm px-4 py-2 bg-primary text-white font-medium rounded hover:bg-yellow-600 inline-flex items-center"
+                        >
                             <svg
                                 className="h-5 w-5 mr-2"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke="currentColor">
+                                stroke="currentColor"
+                            >
                                 <path
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
