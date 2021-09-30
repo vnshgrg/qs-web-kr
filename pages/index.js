@@ -8,7 +8,7 @@ import useTranslation from "next-translate/useTranslation";
 import { Dialog, Transition } from "@headlessui/react";
 
 const Component = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const closeModal = () => {
         setOpen(false);
@@ -183,7 +183,7 @@ const Component = () => {
                 </div>
             </div>
             <div className="bg-gradient-to-br from-primary to-yellow-500">
-                <div className="max-w-2xl mx-auto text-center py-10 sm:py-16 px-4 md:py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto text-center py-10 sm:py-16 px-4 md:py-20 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-medium text-white sm:text-4xl">
                         <span className="block">{t("cta-title")}</span>
                     </h2>
