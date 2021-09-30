@@ -74,7 +74,7 @@ const Navigation = () => {
                             </a>
                         </Link>
                         <Link href="/notice">
-                            <a className="font-medium text-yellow-100 hover:text-white">
+                            <a className="font-medium text-blue-100 hover:text-white">
                                 {t("notices")}
                             </a>
                         </Link>
