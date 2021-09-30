@@ -8,7 +8,7 @@ import useTranslation from "next-translate/useTranslation";
 import { Dialog, Transition } from "@headlessui/react";
 
 const Component = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const closeModal = () => {
         setOpen(false);

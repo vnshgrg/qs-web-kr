@@ -54,26 +54,26 @@ const Navigation = () => {
                     </div>
                     <div className="hidden space-x-10 md:flex md:ml-10">
                         <Link href="/About">
-                            <a className="font-medium text-yellow-100 hover:text-white">
+                            <a className="font-medium text-blue-100 hover:text-white">
                                 {t("about")}
                             </a>
                         </Link>
                         <Link href="/HowToSendMoney">
-                            <a className="font-medium text-yellow-100 hover:text-white">
+                            <a className="font-medium text-blue-100 hover:text-white">
                                 {t("how-to-send")}
                             </a>
                         </Link>
                         <Link href="/HowToRegister">
-                            <a className="font-medium text-yellow-100 hover:text-white">
+                            <a className="font-medium text-blue-100 hover:text-white">
                                 {t("how-to-register")}
                             </a>
                         </Link>
                         <Link href="/Branches">
-                            <a className="font-medium text-yellow-100 hover:text-white">
+                            <a className="font-medium text-blue-100 hover:text-white">
                                 {t("branches")}
                             </a>
                         </Link>
-                        <a className="font-medium text-yellow-100 hover:text-white">
+                        <a className="font-medium text-blue-100 hover:text-white">
                             {t("notices")}
                         </a>
                     </div>
