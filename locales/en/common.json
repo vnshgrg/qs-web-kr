@@ -51,5 +51,6 @@
     "tracker-hold": "Your transaction is on hold.",
     "office-day-01": "Monday~Friday: 10AM-7PM",
     "office-day-02": "Sunday & National Holidays: 10AM-6PM",
-    "office-day-03": "Our office will be closed on Saturday."
+    "office-day-03": "Our office will be closed on Saturday.",
+    "title-notice": "Notice"
 }

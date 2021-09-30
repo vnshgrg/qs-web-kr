@@ -50,5 +50,6 @@
     "tracker-hold": "送金は保留中です。",
     "office-day-01": "月曜日～金曜日　午前10時～午後7時",
     "office-day-02": "日曜日、祭日　午前10時～午後6時",
-    "office-day-03": "土曜日　休み"
+    "office-day-03": "土曜日　休み",
+    "title-notice": "Notice"
 }

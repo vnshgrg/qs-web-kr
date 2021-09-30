@@ -20,7 +20,7 @@ const Navigation = () => {
                                 <span className="sr-only">QS Remit</span>
                                 <img
                                     className="h-10 w-auto sm:h-12"
-                                    src="qs-logo.svg"
+                                    src="/qs-logo.svg"
                                     alt="QSRemit"
                                 />
                             </a>
@@ -73,9 +73,11 @@ const Navigation = () => {
                                 {t("branches")}
                             </a>
                         </Link>
-                        <a className="font-medium text-blue-100 hover:text-white">
-                            {t("notices")}
-                        </a>
+                        <Link href="/notice">
+                            <a className="font-medium text-yellow-100 hover:text-white">
+                                {t("notices")}
+                            </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="hidden md:flex">
@@ -152,9 +154,11 @@ const Navigation = () => {
                                         {t("branches")}
                                     </a>
                                 </Link>
-                                <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
-                                    {t("notices")}
-                                </a>
+                                <Link href="/notice">
+                                    <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                                        {t("notices")}
+                                    </a>
+                                </Link>
 
                                 <LanguageSwitcher />
                             </div>

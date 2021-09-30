@@ -48,7 +48,8 @@
     "tracker-canceled-description-1": "송금 취소",
     "tracker-canceled-description-2": "자세한 내용은 고객센터에 문의하세요.",
     "tracker-hold": "송금이 보류 중입니다.",
-    "office-day-01": " 월요일~금요일   오전10시 ~ 오후7시",
+    "office-day-01": " 월요일~금요일  오전10시 ~ 오후7시",
     "office-day-02": "일요일,공휴일  오던10시~오후6시",
-    "office-day-03": "토요일 휴일"
+    "office-day-03": "토요일  휴일",
+    "title-notice": "Notice"
 }
