@@ -187,7 +187,7 @@ const Component = () => {
                     <h2 className="text-3xl font-medium text-white sm:text-4xl">
                         <span className="block">{t("cta-title")}</span>
                     </h2>
-                    <p className="mt-4 text-lg leading-6 text-yellow-100">
+                    <p className="max-w-2xl mx-auto mt-4 text-lg leading-6 text-yellow-100">
                         {t("cta-description")}
                     </p>
                     <a

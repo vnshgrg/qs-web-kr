@@ -1,5 +1,5 @@
 {
-    "site-name": "QSRemit",
+    "site-name": "QSREMIT",
     "send-money-send-happiness": "Send Money, send happiness",
     "intro-heading": "Setting the standrd for international remittance service",
     "intro-description": "We are the fastest growing international remittance service provider with best rate in the market and no hidden fees.",
@@ -48,5 +48,8 @@
     "tracker-canceled-title": "Transfer canceled",
     "tracker-canceled-description-1": "Your transaction was canceled.",
     "tracker-canceled-description-2": "Please contact our support team for more details.",
-    "tracker-hold": "Your transaction is on hold."
+    "tracker-hold": "Your transaction is on hold.",
+    "office-day-01": "Monday~Friday: 10AM-7PM",
+    "office-day-02": "Sunday & National Holidays: 10AM-6PM",
+    "office-day-03": "Our office will be closed on Saturday."
 }

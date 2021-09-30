@@ -193,7 +193,7 @@ const Component = () => {
     return (
         <>
             <Head>
-                <title>Track transaction - {siteName}</title>
+                <title>{siteName} - Track transaction</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
                 <h1>
