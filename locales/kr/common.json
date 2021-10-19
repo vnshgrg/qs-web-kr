@@ -28,7 +28,7 @@
     "title-send-money-app": "QSREMIT어플리케이션을 사용하여 송금하는방법",
     "title-register": "등록 방법",
     "title-register-app": "QSREMIT 애플리케이션을 사용하여 등록하는방법",
-    "title-branch": "한국의 지점",
+    "title-branch": "일본내 지점",
     "title-thanks": "QSREMIT을 통해 송금해 주셔서 감사합니다 ",
     "title-track": "입금내역조회",
     "cta-secondary-title": "가까운 지점을 찾고 계십니까?",
@@ -48,8 +48,10 @@
     "tracker-canceled-description-1": "송금 취소",
     "tracker-canceled-description-2": "자세한 내용은 고객센터에 문의하세요.",
     "tracker-hold": "송금이 보류 중입니다.",
-    "office-day-01": " 월요일~금요일  오전10시 ~ 오후7시",
+    "office-day-01": " 월요일~금요일   오전10시 ~ 오후7시",
     "office-day-02": "일요일,공휴일  오던10시~오후6시",
-    "office-day-03": "토요일  휴일",
-    "title-notice": "Notice"
+    "office-day-03": "토요일 휴일",
+    "title-notice": "Notice",
+    "ceo-message-title": "고객의 신뢰에 건실하게 응답하는 해외송금 전문회사",
+    "ceo-message-description": "2017 년 11월에  2017-10호로 기획재정부에 정식으로 등록된 해외송금 전문 회사입니다. 고객의 신뢰와 응원에 힘입어 여기까지 성장하였습니다. 경험이 풍부한 임직원과 함께 고객 여러분의 만족과 안심을 얻을 수있는 해외 송금 서비스로 만들어 가겠습니다. 계속해서 고객 여러분의 응원을 부탁드립니다."
 }

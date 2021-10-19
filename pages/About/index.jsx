@@ -107,12 +107,10 @@ const Component = (props) => {
                     </span>
                 </h2>
                 <p className="mt-6 text-primary leading-8 text-2xl font-medium ">
-                    顧客の信頼に堅実に応える海外送金専門会社
+                    {t("ceo-message-title")}
                 </p>
                 <p className="mt-4 text-gray-500 leading-8 ">
-                    2013年10月に韓国送金を始め海外送金サービスを開始し、お客様の信頼と応援により現在に至りました。
-                    経験が豊富なスタッフと一緒に、顧客の皆様の満足と安心を得られる海外送金サービスを提供してまいります。
-                    これからも皆様のなお一層のご支援を心よりお願い申し上げます。
+                    {t("ceo-message-description")}
                 </p>
                 <SeeAllBranch />
             </div>
