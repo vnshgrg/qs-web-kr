@@ -25,15 +25,16 @@ const PageContact = () => {
                     <div className="mt-4">
                         <div className="flex">
                             <div className="text-base text-gray-500">
-                                <p className="text-yellow-600">
+                                <p className="text-blue-600">매일 10AM~7PM</p>
+                                {/* <p className="text-yellow-600">
                                     {t("office-day-01")}
-                                </p>
+                                </p> 
                                 <p className="text-blue-600">
                                     {t("office-day-02")}
                                 </p>
-                                <p className="text-red-600">
+                                 <p className="text-red-600">
                                     {t("office-day-03")}
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     </div>

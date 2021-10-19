@@ -3,6 +3,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { SvgFlag } from "../../config/countries";
+import { ArrowSmRightIcon } from "@heroicons/react/outline";
 
 const languageNames = {
     en: "English",
@@ -46,9 +47,9 @@ const LanguageSwitcher = () => {
             <a
                 href="https://jp.qsremit.net"
                 target="_blank"
-                className="inline-flex justify-center px-4 py-2 mr-3 text-sm font-medium text-gray-500 md:text-white bg-black rounded-md bg-opacity-10 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                className="inline-flex justify-center items-center px-3 py-2 mr-3 text-sm text-gray-500 md:text-gray-100 bg-black rounded-md bg-opacity-10 hover:bg-opacity-20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
-                JAPAN
+                To QSRemit Japan <ArrowSmRightIcon className="w-5 h-5" />
             </a>
             <Menu as="div" className="relative inline-block text-left">
                 <div>

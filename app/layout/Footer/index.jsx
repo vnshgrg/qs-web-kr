@@ -75,35 +75,35 @@ const Footer = () => {
                     <div className="px-5 py-2">
                         <Link href="/Terms01">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms 1
+                                {t("kr-terms-01")}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms02">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms 2
+                                {t("kr-terms-02")}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms03">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms 3
+                                {t("kr-terms-03")}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms04">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms 4
+                                {t("kr-terms-04")}
                             </a>
                         </Link>
                     </div>
                     <div className="px-5 py-2">
                         <Link href="/Terms05">
                             <a className="text-yellow-100 hover:text-white">
-                                Terms 5
+                                {t("kr-terms-05")}
                             </a>
                         </Link>
                     </div>
