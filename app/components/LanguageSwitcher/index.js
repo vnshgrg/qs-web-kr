@@ -10,6 +10,8 @@ const languageNames = {
     jp: "日本語",
     np: "नेपाली",
     kr: "한국어",
+    bd: "বাংলা",
+    pk: "اردو",
 };
 
 const LanguageSwitcher = () => {
@@ -31,7 +33,12 @@ const LanguageSwitcher = () => {
             code = "NPL";
         } else if (locale === "kr") {
             code = "KOR";
+        } else if (locale === "pk") {
+            code = "PAK";
+        } else if (locale === "bd") {
+            code = "BGD";
         }
+
         return (
             <div className="flex items-center">
                 <span className="inline-block mr-2">
