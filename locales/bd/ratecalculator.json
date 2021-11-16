@@ -1,0 +1,17 @@
+{
+    "rate-calculator": "হার হিসাবকারী",
+    "description": "আমাদের বর্তমান বিনিময় হারের উপর ভিত্তি করে আপনার রেমিট্যান্সের পরিমাণ গণনা করুন ।",
+    "from": "এখান থেকে প্রেরণ করুন",
+    "to": "গ্রহণ করা",
+    "Sending": "টাকা প্রেরনের",
+    "Receiving": "টাকা প্রাপ্তির",
+    "amount": " পরিমাণ",
+    "sending": "<0>You send <1>{{currency}} {{amount}}</1> from {{country}}</0>",
+    "receiving": "<0><1>{{amount}}</1> is received at {{country}}</0>",
+    "rate": "<0>@ rate of {{sendingCurrency}} 1 = {{receivingCurrency}} {{receivingFx}}</0>",
+    "service-charge-max-amount-exceed": "Sending amount exceeds maxium amount ({{sendingCurrency}} {{maximum}}) allowed per transaction.",
+    "service-charge-min-amount": "Sending amount is less than minimum amount ({{sendingCurrency}} {{minimum}}) allowed per transaction.",
+    "service-charge-amount": "{{sendingCurrency}} {{amount}} service charge added",
+    "bank-deposit": "ব্যাংক জমা",
+    "cash-pickup": "নগদ গ্রহণ"
+}
