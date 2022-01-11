@@ -513,7 +513,15 @@ const RateCalculator = () => {
 
         return (
             <div className="mt-6">
-                <form action="#" method="POST" className="space-y-6">
+                <form
+                    action="#"
+                    method="POST"
+                    className="space-y-6"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                    }}
+                >
+                    >
                     <div className="grid grid-cols-2 gap-x-6">
                         <div>
                             <label htmlFor="name" className="sr-only">
@@ -538,7 +546,6 @@ const RateCalculator = () => {
                             />
                         </div>
                     </div>
-
                     <div className="grid grid-cols-2 gap-x-6">
                         <div className="flex items-center">
                             <input
@@ -581,7 +588,6 @@ const RateCalculator = () => {
                             </label>
                         </div>
                     </div>
-
                     <div>
                         <label
                             htmlFor="price"
@@ -608,11 +614,9 @@ const RateCalculator = () => {
                             />
                         </div>
                     </div>
-
                     <div className="grid grid-cols-2 gap-x-6">
                         {renderSendingType()}
                     </div>
-
                     <div>{renderResult()}</div>
                 </form>
             </div>
