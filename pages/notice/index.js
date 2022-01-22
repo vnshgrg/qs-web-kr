@@ -16,13 +16,13 @@ const Component = ({ posts }) => {
                 <title>{t("site-name")} - About us</title>
             </Head>
             <div className="text-lg max-w-prose mx-auto">
-                <h1>
+                <h1 className=" text-center">
                     <span className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
                         {t("title-notice")}
                     </span>
                 </h1>
 
-                <div className="bg-white shadow overflow-hidden sm:rounded-lg mt-8 sm:mt-12 spacey-y-4">
+                <div className="bg-white shadow overflow-hidden w-full md:w-2/3 mx-0 md:mx-auto sm:rounded-lg mt-8 sm:mt-12 spacey-y-4">
                     {posts.map(({ title, slug, excerpt, date }, index) => {
                         const postedDate = date.split("T");
                         return (
@@ -37,13 +37,12 @@ const Component = ({ posts }) => {
                                 <div className="text-sm text-gray-500">
                                     Posted on: {postedDate[0]} {postedDate[1]}
                                 </div>
-                                <div className="text-md">
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: excerpt,
-                                        }}
-                                    />
-                                </div>
+                                <div
+                                    className="text-md text-gray-600"
+                                    dangerouslySetInnerHTML={{
+                                        __html: excerpt,
+                                    }}
+                                ></div>
                             </div>
                         );
                     })}
