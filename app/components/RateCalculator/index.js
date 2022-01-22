@@ -521,7 +521,6 @@ const RateCalculator = () => {
                         e.preventDefault();
                     }}
                 >
-                    >
                     <div className="grid grid-cols-2 gap-x-6">
                         <div>
                             <label htmlFor="name" className="sr-only">
