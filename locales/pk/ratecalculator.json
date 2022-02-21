@@ -12,6 +12,6 @@
     "service-charge-max-amount-exceed": "Sending amount exceeds maxium amount ({{sendingCurrency}} {{maximum}}) allowed per transaction.",
     "service-charge-min-amount": "Sending amount is less than minimum amount ({{sendingCurrency}} {{minimum}}) allowed per transaction.",
     "service-charge-amount": "{{sendingCurrency}} {{amount}} service charge added",
-    "bank-deposit": "Bank deposit",
-    "cash-pickup": "کیش اٹھانا"
+    "bank-deposit": "اکاؤنٹ ڈپازٹ",
+    "cash-pickup": "کیش پک اپ"
 }
