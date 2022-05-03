@@ -18,9 +18,15 @@ const RateItem = ({ rate }) => {
                     </div>
                 </div>
                 <div className="ml-5 flex-shrink-0 text-gray-600 font-semibold font-mono">
-                    {rate.fxrate}{" "}
-                    <span className="text-gray-500 text-sm font-light">
-                        ({rate.currency})
+                    <span className="text-gray-500 text-sm font-light hidden sm:inline-block">
+                        1 KRW
+                        <span className="inline-block ml-5">=</span>
+                    </span>
+                    <span className="inline-block w-40 text-right">
+                        {rate.fxrate}{" "}
+                        <span className="text-gray-500 text-sm font-light">
+                            {rate.currency}
+                        </span>
                     </span>
                 </div>
             </div>

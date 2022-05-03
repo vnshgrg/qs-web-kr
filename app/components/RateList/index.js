@@ -32,6 +32,7 @@ const RateList = () => {
                     setTimestamp(TSReadable);
                     setKeyCurrency(response.data.key_currency);
                     setRates(filterUniqueCountries(response.data.list));
+                    console.log(response.data);
                 }
             } catch (error) {
                 console.log(error.message);

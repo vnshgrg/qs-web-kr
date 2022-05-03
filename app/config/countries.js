@@ -4,10 +4,17 @@ export const countries = {
     AZE: "Azerbaijan",
     BGD: "Bangladesh",
     BLR: "Belarus",
+    BRA: "Brazil",
+    CHN: "China",
+    EGY: "Egypt",
+    GHA: "Ghana",
+    HKG: "Hong Kong",
     IDN: "Indonesia",
     IND: "India",
+    JPN: "Japan",
     KAZ: "Kazakhstan",
     KGZ: "Kyrgyzstan",
+    KHM: "Cambodia",
     KOR: "South Korea",
     LKA: "Sri Lanka",
     MDA: "Moldova",
@@ -21,6 +28,8 @@ export const countries = {
     SGP: "Singapore",
     THA: "Thailand",
     TJK: "Tajikistan",
+    TUR: "Turkey",
+    UGA: "Uganda",
     UKR: "Ukraine",
     UZB: "Uzbekistan",
     VNM: "Viet Nam",
@@ -32,9 +41,16 @@ export const countriesFlag = {
     AZE: renderFlag("AZE"),
     BGD: renderFlag("BGD"),
     BLR: renderFlag("BLR"),
+    BRA: renderFlag("BRA"),
+    CHN: renderFlag("CHN"),
+    EGY: renderFlag("EGY"),
+    GHA: renderFlag("GHA"),
+    HKG: renderFlag("HKG"),
     IDN: renderFlag("IDN"),
     IND: renderFlag("IND"),
+    JPN: renderFlag("JPN"),
     KAZ: renderFlag("KAZ"),
+    KHM: renderFlag("KHM"),
     KGZ: renderFlag("KGZ"),
     KOR: renderFlag("KOR"),
     LKA: renderFlag("LKA"),
@@ -49,6 +65,8 @@ export const countriesFlag = {
     SGP: renderFlag("SGP"),
     THA: renderFlag("THA"),
     TJK: renderFlag("TJK"),
+    TUR: renderFlag("TUR"),
+    UGA: renderFlag("UGA"),
     UKR: renderFlag("UKR"),
     UZB: renderFlag("UZB"),
     VNM: renderFlag("VNM"),
@@ -151,6 +169,156 @@ export const serviceCharge = {
         ],
     },
     BLR: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    BRA: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    CHN: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    EGY: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    GHA: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    HKG: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    TUR: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    UGA: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    KHM: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    JPN: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    TJK: {
         type: { bank: true, cash: false },
         bank: [
             {
