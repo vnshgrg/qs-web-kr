@@ -192,7 +192,6 @@ const RateCalculator = () => {
         if (!selectedReceivingCountry) return null;
 
         if (sendingOrReceiving === "Sending") {
-            console.log(amount, currentServiceChargeAmount);
             return amount;
         } else {
             return formatAmount(
