@@ -92,12 +92,7 @@ const Component = () => {
                 </Dialog>
             </Transition>
 
-            <div
-                className="py-10 md:py-20 lg:py-24 xl:py-28 bg-cover bg-bottom"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(0, 167, 238, 0.6), rgba(0, 167, 238, 0.6)), url('/backgrounds/01.jpg')`,
-                }}
-            >
+            <div className="py-10 md:py-20 lg:py-24 xl:py-28 bg-cover bg-bottom bg-gradient-to-br from-blue-400 to-blue-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="">
                         <h2 className="text-base text-gray-100 font-semibold tracking-wide uppercase">
