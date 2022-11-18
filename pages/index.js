@@ -92,16 +92,21 @@ const Component = () => {
                 </Dialog>
             </Transition>
 
-            <div className="bg-white py-10 md:py-20 lg:py-24 xl:py-28">
+            <div
+                className="py-10 md:py-20 lg:py-24 xl:py-28 bg-cover bg-bottom"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0, 167, 238, 0.6), rgba(0, 167, 238, 0.6)), url('/backgrounds/01.jpg')`,
+                }}
+            >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="">
-                        <h2 className="text-base text-yellow-500 font-semibold tracking-wide uppercase">
+                        <h2 className="text-base text-gray-100 font-semibold tracking-wide uppercase">
                             {t("send-money-send-happiness")}
                         </h2>
-                        <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-primary sm:text-4xl">
+                        <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-white sm:text-4xl">
                             {t("intro-heading")}
                         </p>
-                        <p className="mt-4 max-w-2xl text-xl text-gray-500">
+                        <p className="mt-4 max-w-2xl text-xl text-gray-50">
                             {t("intro-description")}
                         </p>
                     </div>
