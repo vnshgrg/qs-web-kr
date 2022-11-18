@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const LogoCloud = () => {
     return (
-        <div className="bg-yellow-100">
-            <div className="max-w-7xl mx-auto py-8 md:py-16 px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-                    Our payout partners
+        <div
+            className="bg-cover bg-right-top"
+            style={{ backgroundImage: `url('/backgrounds/02.jpg')` }}
+        >
+            <div className="max-w-7xl mx-auto py-8 md:py-20 px-4 sm:px-6 lg:px-8">
+                <p className="text-center text-lg font-semibold uppercase text-white tracking-wide">
+                    Our partners
                 </p>
                 <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
                     <div className="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">

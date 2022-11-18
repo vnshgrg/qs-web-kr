@@ -1,5 +1,5 @@
-import React from 'react';
-import Icon from '../Icon';
+import React from "react";
+import Icon from "../Icon";
 
 const BlobComp = ({ icon, title, children }) => {
     return (
@@ -8,11 +8,11 @@ const BlobComp = ({ icon, title, children }) => {
                 <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
                     <Icon name={icon} className="h-6 w-6" />
                 </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-primary">
+                <p className="ml-16 text-lg leading-6 font-medium text-white">
                     {title}
                 </p>
             </dt>
-            <dd className="mt-2 ml-16 text-base text-gray-500">{children}</dd>
+            <dd className="mt-2 ml-16 text-base text-gray-50">{children}</dd>
         </div>
     );
 };
