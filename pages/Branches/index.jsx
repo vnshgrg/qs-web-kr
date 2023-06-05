@@ -10,8 +10,8 @@ const branches = [
         name: "HEAD OFFICE",
         location: "",
         details: [
-            "04541 서울특별시 중구 삼일대로 363(장교동) 장교빌딩 710호",
-            "710 Jang gyo Bldg 363 Samil-daero, Myeong-dong Jung-gu  Seoul, Korea",
+            " 03105 서울특별시 종로구 종로53길 7 1층",
+            "03105 1F Jongro53 Gil 7 Jongro-Gu Seoul, Korea",
             "TEL: 02-755-6321",
         ],
     },
