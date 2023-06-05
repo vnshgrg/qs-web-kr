@@ -12,11 +12,10 @@ const PageContact = () => {
                     </h2>
                     <div className="mt-3">
                         <p className="text-lg text-gray-500">
-                            04541 서울특별시 중구 삼일대로 363(장교동) 장교빌딩
-                            710호
+                            03105 서울특별시 종로구 종로53길 7 1층
                             <br />
                             <span className="text-sm">
-                                710 Janggyo Bldg Samildearo 363 Jung-Gu,
+                                03105 1F Jongro53 Gil 7 Jongro-Gu
                                 <br />
                                 Seoul, Korea
                             </span>
