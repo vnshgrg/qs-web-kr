@@ -47,12 +47,11 @@ const Component = (props) => {
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-700 sm:mt-0 sm:col-span-2">
                                     <p>
-                                        04541 서울특별시 중구 삼일대로
-                                        363(장교동) 장교빌딩 710호
+                                        03105 서울특별시 종로구 종로53길 7 1층
                                     </p>
                                     <p>
-                                        710 Janggyo Bldg Samildearo 363 Jung-Gu,
-                                        Seoul, Korea
+                                        03105 1F Jongro53 Gil 7 Jongro-Gu Seoul,
+                                        Korea
                                     </p>
                                     <p className="mt-2">TEL: 02-755-6321</p>
                                     <p>FAX: 02-755-6320</p>

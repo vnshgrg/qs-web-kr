@@ -15,15 +15,15 @@ const branches = [
             "TEL: 02-755-6321",
         ],
     },
-    {
-        name: "Dongdaemun Branch",
-        location: "",
-        details: [
-            "",
-            "151-1 Changshin-dong Jongro-gu Seoul, Korea",
-            "TEL: 010-2952-6321",
-        ],
-    },
+    // {
+    //     name: "Dongdaemun Branch",
+    //     location: "",
+    //     details: [
+    //         "",
+    //         "151-1 Changshin-dong Jongro-gu Seoul, Korea",
+    //         "TEL: 010-2952-6321",
+    //     ],
+    // },
     {
         name: "Ansan Branch",
         location: "",
