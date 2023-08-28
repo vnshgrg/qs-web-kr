@@ -1,5 +1,5 @@
-const nextTranslate = require('next-translate');
+const nextTranslate = require("next-translate-plugin");
 
 module.exports = {
-    ...nextTranslate()
-}
+  ...nextTranslate(),
+};

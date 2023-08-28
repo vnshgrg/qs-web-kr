@@ -1,8 +1,8 @@
 {
-    "locales": ["en", "kr", "np", "jp", "bd", "pk"],
-    "defaultLocale": "kr",
-    "pages": {
-        "*": ["common", "navigation"],
-        "/": ["ratecalculator", "hero"]
-    }
+  "locales": ["kr", "en", "jp", "np", "bd", "pk"],
+  "defaultLocale": "kr",
+  "pages": {
+    "*": ["common", "navigation"],
+    "/": ["ratecalculator", "hero"]
+  }
 }
