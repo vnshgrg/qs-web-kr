@@ -44,8 +44,8 @@ const RateList = () => {
         return null;
     }
     return (
-        <>
-            <div className="bg-white shadow overflow-hidden sm:rounded-md">
+        <div className="h-full">
+            <div className="bg-white shadow overflow-auto sm:rounded-md h-[50rem]">
                 <ul className="divide-y divide-gray-100">
                     {rates.map((country, index) => {
                         return (
@@ -57,7 +57,7 @@ const RateList = () => {
             <div className="text-gray-400 text-sm mt-4">
                 Last updated on: {timestamp}
             </div>
-        </>
+        </div>
     );
 };
 
