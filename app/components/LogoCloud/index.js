@@ -60,6 +60,13 @@ const LogoCloud = () => {
                             alt="Brac Bank"
                         />
                     </div>
+                    <div className={logoContainerStyle}>
+                        <img
+                            className="h-16"
+                            src="/payout-partners/sendmn.svg"
+                            alt="Sendmn"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
