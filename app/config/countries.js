@@ -1,4 +1,5 @@
 export const countries = {
+    ARE: "UAE",
     ARM: "Armenia",
     AUS: "Australia",
     AZE: "Azerbaijan",
@@ -7,6 +8,7 @@ export const countries = {
     BRA: "Brazil",
     CHN: "China",
     EGY: "Egypt",
+    GBR: "UK",
     GHA: "Ghana",
     HKG: "Hong Kong",
     IDN: "Indonesia",
@@ -36,6 +38,7 @@ export const countries = {
 };
 
 export const countriesFlag = {
+    ARE: renderFlag("ARE"),
     ARM: renderFlag("ARM"),
     AUS: renderFlag("AUS"),
     AZE: renderFlag("AZE"),
@@ -44,6 +47,7 @@ export const countriesFlag = {
     BRA: renderFlag("BRA"),
     CHN: renderFlag("CHN"),
     EGY: renderFlag("EGY"),
+    GBR: renderFlag("GBR"),
     GHA: renderFlag("GHA"),
     HKG: renderFlag("HKG"),
     IDN: renderFlag("IDN"),
@@ -91,6 +95,36 @@ export function SvgFlag({ code }) {
 }
 
 export const serviceCharge = {
+    ARE: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
+    GBR: {
+        type: { bank: true, cash: false },
+        bank: [
+            {
+                min: 5000,
+                max: 301500,
+                serviceCharge: 1500,
+            },
+            {
+                min: 301001,
+                max: 1002000,
+                serviceCharge: 2000,
+            },
+        ],
+    },
     ARM: {
         type: { bank: true, cash: false },
         bank: [
